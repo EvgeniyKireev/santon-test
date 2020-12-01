@@ -2,7 +2,7 @@ import React from "react";
 import {withStore} from "../../state/withStore";
 import {Product} from "../product";
 import "./product-list.scss";
-import Modal from "../modalProduct/Modal";
+import Index from "../modalProduct";
 
 
 class ProductList extends React.Component {
@@ -50,7 +50,7 @@ class ProductList extends React.Component {
                     <Product login={this.props.login} key={product.id} product={product} removeProduct={removeProduct}/>
                 ))}
                 {products.length === 0 && <h3>Вы ничего не добавили</h3>}
-                {this.state.isModal && <Modal setTitle={setTitle} setDescription={setDescription}
+                {this.state.isModal && <Index setTitle={setTitle} setDescription={setDescription}
                                               setPrice={setPrice}
                                               addProduct={addProduct}/>}
             </div>

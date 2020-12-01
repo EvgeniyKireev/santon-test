@@ -4,7 +4,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Button from '@material-ui/core/Button';
 
-export default class Modal extends React.Component {
+export default class Index extends React.Component {
     render() {
 
         return ReactDOM.createPortal(<div className={'main'}>

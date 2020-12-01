@@ -3,7 +3,7 @@ import "./state/stores/ProductsStore";
 import './state/stores/AuthorizationStore'
 import './index.scss';
 import ProductList from "./components/productList";
-import Autorization from "./components/Authorization";
+import Autorization from "./components/authorization";
 import Button from "@material-ui/core/Button";
 
 
