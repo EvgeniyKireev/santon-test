@@ -1,0 +1,19 @@
+.product-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  & > .product {
+    margin-bottom: 24px;
+  }
+}
+button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
