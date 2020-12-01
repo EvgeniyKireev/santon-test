@@ -1,6 +1,6 @@
 import React from "react";
 import "./product.scss";
-
+import HighlightOffIcon from '@material-ui/icons/HighlightOff';
 export class Product extends React.Component {
   render() {
     const { product } = this.props;
@@ -29,6 +29,7 @@ export class Product extends React.Component {
             alt=""
           />
         </div>
+        <div onClick={() => {this.props.removeProduct(product.id)}} className={'btnRemove'}><HighlightOffIcon style={{fontSize: '20px'}}/></div>
       </div>
     );
   }

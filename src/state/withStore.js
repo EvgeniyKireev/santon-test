@@ -22,13 +22,6 @@ export function withStore(storeName, fill) {
       componentDidMount() {
         store.subscribe(this.handleStoreUpdate);
       }
-      componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log(prevState)
-        console.log(this.state)
-        console.log('-----------')
-        console.log(prevState.data.products)
-        console.log(this.state.data.products)
-      }
 
       componentWillUnmount() {
         store.unsubscribe(this.handleStoreUpdate);
