@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+.appMain{
+  display: flex;
+  flex-direction: column;
+}
+.login {
+  display: flex;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 100px;
+}

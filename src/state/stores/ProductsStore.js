@@ -44,5 +44,4 @@ const ProductsStore = new Store("products", {
 });
 
 Registry.addStore(ProductsStore);
-window.store = ProductsStore;
 export { ProductsStore };

@@ -24,6 +24,7 @@ class ProductList extends React.Component {
         const {products, dispatch} = this.props;
         const openModal = () => {
             this.setState({isModal: true})
+            console.log('whatsapp')
         }
         const addProduct = () => {
             dispatch('ADD_PRODUCT', {
@@ -39,15 +40,16 @@ class ProductList extends React.Component {
         }
         const removeProduct = (productId) => {
             dispatch('REMOVE_PRODUCT', {
-                    id: productId
+                id: productId
             })
         }
         return (
             <div className="product-list">
-                <button onClick={openModal}>добавить товар</button>
+                {this.props.login && <button onClick={openModal}>добавить товар</button>}
                 {products.map((product) => (
-                    <Product key={product.id} product={product} removeProduct={removeProduct}/>
+                    <Product login={this.props.login} key={product.id} product={product} removeProduct={removeProduct}/>
                 ))}
+                {products.length === 0 && <h3>Вы ничего не добавили</h3>}
                 {this.state.isModal && <Modal setTitle={setTitle} setDescription={setDescription}
                                               setPrice={setPrice}
                                               addProduct={addProduct}/>}
